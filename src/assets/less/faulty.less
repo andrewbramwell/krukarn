@@ -358,7 +358,7 @@
             content: "";
             width: 100%;
             height: 0%;
-            background: #1a1a1a;
+            background: var(--primary);
             opacity: 1;
             position: absolute;
             display: block;
@@ -436,7 +436,8 @@
             width: (56/16rem);
             height: (56/16rem);
             margin: 0 0 0 auto;
-            background-color: var(--primary);
+            background-color: var(--secondary);
+            border-radius: (4/16rem);
             border: none;
             display: flex;
             justify-content: center;
@@ -608,7 +609,7 @@
             /* 16px - 24px */
             font-size: clamp(1rem, 2.5vw, 1.5rem);
             line-height: 1.2em;
-            text-transform: uppercase;
+            font-family: syne;
             font-weight: bold;
             text-decoration: none;
             margin: 0;
@@ -617,11 +618,11 @@
             position: relative;
 
             &.cs-active {
-                color: var(--primary);
+                color: var(--secondary);
             }
 
             &:hover {
-                color: var(--primary);
+                color: var(--secondart);
             }
         }
 
@@ -637,21 +638,24 @@
         #cs-navigation {
             background-color: var(--dark);
 
-            .cs-logo {
-                /* makes it white */
-                filter: grayscale(1) brightness(1000%);
-            }
-
             .cs-line {
                 background-color: #fff;
             }
 
             .cs-ul-wrapper {
-                background-color: var(--medium);
+                background-color: var(--dark);
             }
 
             .cs-li-link {
                 color: var(--bodyTextColorWhite);
+
+                &.cs-active {
+                    color: var(--secondary);
+                }
+    
+                &:hover {
+                    color: var(--secondary);
+                }
             }
         }
     }
@@ -712,7 +716,7 @@
             height: 0;
             margin: 0;
             padding: 0;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
@@ -777,7 +781,7 @@
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
-            border-bottom: 5px solid var(--primary);
+            border-bottom: 5px solid var(--secondary);
             /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
             // columns: 2;
             position: absolute;
@@ -898,7 +902,7 @@
             content: "";
             width: 100%;
             height: 0%;
-            background: #1a1a1a;
+            background: var(--primary);
             opacity: 1;
             position: absolute;
             display: block;
@@ -926,17 +930,19 @@
 
         .cs-logo {
             width: auto;
-            height: (78/16rem);
+            height: (60/16rem);
+            /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 100;
-        
+
             img {
                 width: 100%;
                 height: 100%;
+                /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
         }
@@ -971,82 +977,36 @@
             font-size: clamp(0.875rem, 0.6vw, 1rem);
             line-height: 1.5em;
             font-weight: 700;
+            font-family: syne;
             text-decoration: none;
-            text-transform: uppercase;
             margin: 0;
-            padding: 0 (16/16rem);
             color: var(--bodyTextColorWhite);
             display: block;
             position: relative;
-            z-index: 1;
             transition: color 0.3s;
 
             &:before {
-                /* on scroll background */
                 content: "";
-                width: 100%;
-                height: (40/16rem);
-                background: var(--primary);
-                opacity: 0;
-                position: absolute;
-                display: block;
-                top: 50%;
-                left: 50%;
-                z-index: -1;
-                transform: translate(-50%, -50%) scale(1.2);
-                transition:
-                    opacity 0.3s,
-                    transform 0.3s;
-            }
-
-            &:hover {
-                &:before {
-                    opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
-                }
-            }
-
-            &.cs-active {
-                &:before {
-                    opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
-                }
-            }
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (32/16rem);
-            background-color: transparent;
-            border: 1px solid var(--primary);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
                 width: 0%;
-                background: var(--primary);
+                height: 1px;
+                background: currentColor;
                 opacity: 1;
-                top: 0;
+                display: block;
+                position: absolute;
+                bottom: -2px;
                 left: 0;
-                z-index: -1;
                 transition: width 0.3s;
             }
 
             &:hover {
+                color: var(--secondary);
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &.cs-active {
+                color: var(--secondary);
                 &:before {
                     width: 100%;
                 }
@@ -1054,7 +1014,21 @@
         }
     }
 }
-                                
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #cs-navigation {
+
+            &:before {
+               
+                background: #000;
+            }
+
+            
+        }
+    }
+}
                                 
                                 
 
@@ -1949,6 +1923,4 @@
         }
     }
 }
-                                
-                                
-                                
+                        
