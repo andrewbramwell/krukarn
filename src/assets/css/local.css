@@ -1,112 +1,188 @@
 /*-- -------------------------- -->
-<---    Featured Service 1      -->
+<---         Benefits           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #sbs-867 {
+  #services-1175 {
     padding: var(--sectionPadding);
-    background-color: #f7f7f7;
   }
-  #sbs-867 .cs-container {
-    width: 100%;
-    /* changes to 1280px at desktop */
+  #services-1175 .cs-container {
     max-width: 34.375rem;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 7vw, 4rem);
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #sbs-867 .cs-content {
-    /* set text aling to left if content needs to be left aligned */
-    text-align: left;
+  #services-1175 .cs-content {
     width: 100%;
-    max-width: 33.875rem;
-    /* prevents padding from affecting width and height */
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
+    align-items: center;
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
   }
-  #sbs-867 .cs-title {
-    /* 17 characters wide including spaces */
-    max-width: 17ch;
+  #services-1175 .cs-title {
+    /* max width of 22 characters, includes spaces between words */
+    max-width: 39ch;
   }
-  #sbs-867 .cs-text {
-    margin-bottom: 1rem;
+  #services-1175 .cs-text {
+    max-width: 66.5rem;
   }
-  #sbs-867 .cs-text:last-of-type {
-    margin-bottom: 2rem;
+  #services-1175 .cs-card-group {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
   }
-  #sbs-867 .cs-picture {
-    display: block;
+  #services-1175 .cs-item {
+    list-style: none;
+    max-width: 21.875rem;
+    width: 100%;
+    margin: 0 auto;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: #f7f7f7;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     position: relative;
-    width: 100%;
-    max-width: 39.375rem;
-    /* 400px - 775px */
-    height: clamp(25rem, 70vw, 48.4375rem);
-    overflow: hidden;
+    z-index: 1;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    text-align: center;
+    grid-column: span 12;
+    grid-row: span 1;
   }
-  #sbs-867 .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  #services-1175 .cs-item:hover .cs-h3,
+  #services-1175 .cs-item:hover .cs-link {
+    color: var(--secondary);
+  }
+  #services-1175 .cs-item:hover .cs-arrow {
+    filter: initial;
+  }
+  #services-1175 .cs-picture {
+    width: 6.25rem;
+    height: auto;
+    margin: 0.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #services-1175 .cs-icon {
+    width: 4.5rem;
+    height: auto;
+  }
+  #services-1175 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+    text-align: inherit;
+  }
+  #services-1175 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    max-width: 28.125rem;
+    margin: 0;
+    margin-bottom: 1.25rem;
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #services-1175 .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-top: auto;
+    color: var(--headerColor);
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: color 0.3s;
+    text-align: inherit;
+  }
+  #services-1175 .cs-link:hover .cs-arrow {
+    transform: translateX(0.25rem);
+  }
+  #services-1175 .cs-arrow {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+    filter: grayscale(1) brightness(0);
+    transition: filter 0.3s, transform 0.3s;
   }
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 64rem) {
-  #sbs-867 {
-    padding: var(--sectionPadding);
-  }
-  #sbs-867 .cs-container {
-    flex-direction: row;
+@media only screen and (min-width: 48rem) {
+  #services-1175 .cs-container {
     max-width: 80rem;
-    justify-content: space-between;
   }
-  #sbs-867 .cs-content {
-    width: 53%;
-    /* reset the padding, add the section padding back to the section container */
-    padding: 0;
+  #services-1175 .cs-item {
+    max-width: 29rem;
+    grid-column: span 6;
   }
-  #sbs-867 .cs-picture {
-    width: 47vw;
-    position: relative;
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #services-1175 .cs-item {
+    grid-column: span 3;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs-867 {
-    background-color: var(--dark);
+  body.dark-mode #services-1175 .cs-item {
+    background-color: var(--medium);
+    border-color: rgba(255, 255, 255, 0.2);
   }
-  body.dark-mode #sbs-867 .cs-topper {
-    color: var(--primaryLight);
+  body.dark-mode #services-1175 .cs-item:hover .cs-h3 {
+    color: var(--secondary);
   }
-  body.dark-mode #sbs-867 .cs-title,
-  body.dark-mode #sbs-867 .cs-text {
+  body.dark-mode #services-1175 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-1175 .cs-title,
+  body.dark-mode #services-1175 .cs-text,
+  body.dark-mode #services-1175 .cs-h3,
+  body.dark-mode #services-1175 .cs-item-text,
+  body.dark-mode #services-1175 .cs-link {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-867 .cs-text {
+  body.dark-mode #services-1175 .cs-text {
     opacity: 0.8;
   }
-  body.dark-mode #sbs-867 .cs-picture:before {
-    background-color: var(--accent);
+  body.dark-mode #services-1175 .cs-icon {
+    /* turns it white */
+    filter: grayscale(1) brightness(1000%);
   }
 }
 /*-- -------------------------- -->
-<---     Featured Service 2     -->
+<---       Why choose us        -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #sbs-r-870 {
+  #sbs-1443 {
     padding: var(--sectionPadding);
     background-color: #f7f7f7;
+    overflow: hidden;
   }
-  #sbs-r-870 .cs-container {
+  #sbs-1443 .cs-container {
     width: 100%;
     /* changes to 1280px at desktop */
     max-width: 34.375rem;
@@ -115,110 +191,170 @@
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 7vw, 4rem);
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
   }
-  #sbs-r-870 .cs-content {
+  #sbs-1443 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: left;
     width: 100%;
     max-width: 33.875rem;
-    /* prevents padding from affecting width and height */
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #sbs-r-870 .cs-title {
-    /* 17 characters wide including spaces */
-    max-width: 17ch;
-  }
-  #sbs-r-870 .cs-text {
+  #sbs-1443 .cs-text {
     margin-bottom: 1rem;
   }
-  #sbs-r-870 .cs-text:last-of-type {
+  #sbs-1443 .cs-text:last-of-type {
     margin-bottom: 2rem;
   }
-  #sbs-r-870 .cs-picture {
-    display: block;
-    position: relative;
+  #sbs-1443 .cs-card-group {
     width: 100%;
     max-width: 39.375rem;
-    /* 400px - 775px */
-    height: clamp(25rem, 70vw, 48.4375rem);
-    overflow: hidden;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
   }
-  #sbs-r-870 .cs-picture img {
+  #sbs-1443 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: left;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+  }
+  #sbs-1443 .cs-picture {
+    width: 100%;
+    max-width: 40.625rem;
+    min-height: 22.625rem;
+    border-radius: 1.5rem;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-1443 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     object-fit: cover;
   }
 }
-/* Desktop - 1024px */
+/* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #sbs-r-870 {
-    padding: var(--sectionPadding);
-  }
-  #sbs-r-870 .cs-container {
-    flex-direction: row;
+  #sbs-1443 .cs-container {
     max-width: 80rem;
+    flex-direction: row;
     justify-content: space-between;
-  }
-  #sbs-r-870 .cs-content {
-    width: 53%;
-    /* reset the padding, add the section padding back to the section container */
-    padding: 0;
-    /* sends it to the left in the 1st position */
-    order: -1;
-  }
-  #sbs-r-870 .cs-picture {
-    width: 47vw;
+    align-items: stretch;
     position: relative;
+  }
+  #sbs-1443 .cs-content {
+    width: 50%;
+    padding: 2.5rem 0;
+  }
+  #sbs-1443 .cs-picture {
+    height: auto;
+    width: 55%;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #sbs-r-870 {
-    background-color: var(--dark);
+  body.dark-mode #sbs-1443 {
+    background-color: rgba(0, 0, 0, 0.2);
   }
-  body.dark-mode #sbs-r-870 .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r-870 .cs-title,
-  body.dark-mode #sbs-r-870 .cs-text {
+  body.dark-mode #sbs-1443 .cs-title,
+  body.dark-mode #sbs-1443 .cs-text,
+  body.dark-mode #sbs-1443 .cs-li,
+  body.dark-mode #sbs-1443 .cs-h3,
+  body.dark-mode #sbs-1443 .cs-li-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r-870 .cs-text {
-    opacity: 0.8;
-  }
-  body.dark-mode #sbs-r-870 .cs-picture:before {
-    background-color: var(--accent);
+  body.dark-mode #sbs-1443 .cs-topper {
+    color: var(--secondary);
   }
 }
+/* Mobile - 360px */
+/* you can copy and paste these styles into the section CSS where you placed the #list-1336 HTML, or you can place it in your global stylesheet so you can reuse the HTML in any Side By Side section on your site. That way when you make changes to it, it will also change everywhere in the site */
+#stats-1336 {
+  width: 100%;
+  max-width: 39.375rem;
+  padding: 0;
+  /* 32px - 48px */
+  margin: clamp(2rem, 5vw, 3rem) 0 0 0;
+  /* 32px - 48px */
+  padding: clamp(2rem, 5vw, 3rem) 0 0 0;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.75rem;
+}
+#stats-1336 .cs-item {
+  list-style: none;
+  width: 32%;
+  /* making flex so we can align a heading with 1 line to the bottom */
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  align-content: space-between;
+}
+#stats-1336 .cs-number {
+  font-size: 1.5625rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  text-align: left;
+  color: var(--primary);
+  display: block;
+  margin: 0 0 0.5rem 0;
+}
+#stats-1336 .cs-h3 {
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 400;
+  text-align: left;
+  /* auto margin top will push text to bottom if there's only one line */
+  margin: 0;
+  color: var(--bodyTextColor);
+  font-family: poppins;
+}
+/* Dark Mode, copy and paste only the styles inside the #list-1336 brackets into your section's dark mode media query */
+body.dark-mode #stats-1336 .cs-number,
+body.dark-mode #stats-1336 .cs-h3 {
+  color: var(--bodyTextColorWhite);
+}
+body.dark-mode #stats-1336 .cs-h3 {
+  opacity: 0.8;
+}
 /*-- -------------------------- -->
-<---            FAQ             -->
+<---         Services           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #faq-1108 {
+  #services-877 {
     padding: var(--sectionPadding);
-    position: relative;
   }
-  #faq-1108 .cs-container {
+  #services-877 .cs-container {
     width: 100%;
-    /* changes to 1280px at desktop */
-    max-width: 36.5rem;
+    /* changes to 1280px at Tablet */
+    max-width: 49rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 32px - 48px */
-    gap: clamp(2rem, 6vw, 3rem);
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #faq-1108 .cs-content {
+  #services-877 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -227,175 +363,425 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: center;
   }
-  #faq-1108 .cs-title {
-    /* 32px - 48px */
-    margin: 0 0 clamp(2rem, 5vw, 3rem);
+  #services-877 .cs-title {
+    /* max width of 22 characters, includes spaces between words */
+    max-width: 39ch;
   }
-  #faq-1108 .cs-picture {
-    width: 100%;
-    /* 360px - 400px */
-    height: clamp(22.5rem, 54vw, 25rem);
-    display: block;
-    position: relative;
+  #services-877 .cs-text {
+    max-width: 66.5rem;
   }
-  #faq-1108 .cs-picture img {
+  #services-877 .cs-card-group {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  #faq-1108 .cs-faq-group {
-    width: 100%;
-    max-width: 40.625rem;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
   }
-  #faq-1108 .cs-faq-item {
+  #services-877 .cs-item {
+    text-align: center;
     list-style: none;
     width: 100%;
-    background-color: #f7f7f7;
-    /* clips all corners of the button that overlap the rounded border */
+    max-width: 31.25rem;
+    border-radius: 1rem;
+    background-color: #fff;
     overflow: hidden;
-    transition: border-bottom 0.3s;
-  }
-  #faq-1108 .cs-faq-item.active .cs-button {
-    color: var(--primary);
-  }
-  #faq-1108 .cs-faq-item.active .cs-button:before {
-    background-color: var(--primary);
-    transform: rotate(315deg);
-  }
-  #faq-1108 .cs-faq-item.active .cs-button:after {
-    background-color: var(--primary);
-    transform: rotate(-315deg);
-  }
-  #faq-1108 .cs-faq-item.active .cs-item-p {
-    height: auto;
-    /* 20px - 24px bottom */
-    /* 16px - 24px left & right */
-    padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
-    opacity: 1;
-  }
-  #faq-1108 .cs-button {
-    /* 16px - 20px */
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    line-height: 1.2em;
-    text-align: left;
-    font-weight: bold;
-    /* 20px - 24px */
-    padding: clamp(1.25rem, 2vw, 1.5rem);
-    background-color: #f7f7f7;
-    border: none;
-    color: var(--headerColor);
-    display: block;
-    width: 100%;
+    grid-column: span 3;
     position: relative;
-    transition: background-color 0.3s, color 0.3s;
+    z-index: 1;
+    transition: box-shadow 0.3s, transform 0.3s;
   }
-  #faq-1108 .cs-button:hover {
-    cursor: pointer;
+  #services-877 .cs-item:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: translateY(-0.4375rem);
   }
-  #faq-1108 .cs-button:before {
-    /* left line */
+  #services-877 .cs-item:hover .cs-picture img {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  #services-877 .cs-item:hover .cs-h3 {
+    color: var(--secondary);
+  }
+  #services-877 .cs-item:before {
+    /* border, done in pseudo so it can sit under the picture */
     content: "";
-    width: 0.5rem;
-    height: 0.125rem;
-    background-color: var(--headerColor);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px solid #e8e8e8;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    background: transparent;
     opacity: 1;
-    border-radius: 50%;
     position: absolute;
     display: block;
-    top: 50%;
-    right: 1.5rem;
-    transform: rotate(45deg);
-    /* animate the transform from the left side of the x axis, and the center of the y */
-    transform-origin: left center;
-    transition: transform 0.5s;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
-  #faq-1108 .cs-button:after {
-    /* right line */
-    content: "";
-    width: 0.5rem;
-    height: 0.125rem;
-    background-color: var(--headerColor);
-    opacity: 1;
-    border-radius: 50%;
+  #services-877 .cs-link {
+    text-decoration: none;
+    padding: 0 0 1.25rem 0;
+    display: block;
+  }
+  #services-877 .cs-picture {
+    width: 100%;
+    height: 12.5rem;
+    margin-bottom: 1.25rem;
+    background-color: var(--secondary);
+    /* clips the img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 10;
+  }
+  #services-877 .cs-picture img {
     position: absolute;
-    display: block;
-    top: 50%;
-    right: 1.3125rem;
-    transform: rotate(-45deg);
-    /* animate the transform from the right side of the x axis, and the center of the y */
-    transform-origin: right center;
-    transition: transform 0.5s;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.6s, opacity 0.3s;
   }
-  #faq-1108 .cs-button-text {
-    width: 80%;
-    display: block;
-  }
-  #faq-1108 .cs-item-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    width: 90%;
-    height: 0;
-    margin: 0;
+  #services-877 .cs-h3 {
+    font-size: 1.25rem;
+    text-align: inherit;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: var(--headerColor);
+    margin: 0 0 0.75rem 0;
     /* 16px - 24px */
     padding: 0 clamp(1rem, 2vw, 1.5rem);
-    opacity: 0;
+    transition: color 0.3s;
+  }
+  #services-877 .cs-item-text {
+    /* 14px - 16px  */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    text-align: inherit;
+    line-height: 1.5em;
     color: var(--bodyTextColor);
-    /* clips the text so it doesn't show up */
-    overflow: hidden;
-    transition: opacity 0.3s, padding-bottom 0.3s;
+    margin: 0;
+    padding: 0 1.25rem;
   }
 }
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #faq-1108 .cs-container {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-877 .cs-container {
     max-width: 80rem;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
   }
-  #faq-1108 .cs-content {
-    width: 40%;
-    text-align: left;
-    align-items: flex-start;
-    /* prevents flexbox from squishing it */
-    flex: none;
+  #services-877 .cs-item {
+    grid-column: span 1;
+    max-width: 28.875rem;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #faq-1108 .cs-title,
-  body.dark-mode #faq-1108 .cs-item-p {
+  body.dark-mode #services-877 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-877 .cs-title,
+  body.dark-mode #services-877 .cs-text,
+  body.dark-mode #services-877 .cs-h3,
+  body.dark-mode #services-877 .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #faq-1108 .cs-faq-item {
-    background-color: var(--accent);
+  body.dark-mode #services-877 .cs-text,
+  body.dark-mode #services-877 .cs-item-text {
+    opacity: 0.8;
   }
-  body.dark-mode #faq-1108 .cs-faq-item.active .cs-button {
-    background-color: var(--primary);
+  body.dark-mode #services-877 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #services-877 .cs-item:before {
+    opacity: 0.3;
+  }
+}
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-1582 {
+    padding: var(--sectionPadding);
+    background-color: #F7F7F7;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1582 .cs-container {
+    width: 100%;
+    /* changes to 1280px at talet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 5vw, 4rem);
+    position: relative;
+  }
+  #faq-1582 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #faq-1582 .cs-title {
+    margin: 0;
+  }
+  #faq-1582 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #faq-1582 .cs-item {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    /* 20px - 32px */
+    padding: clamp(1.25rem, 2.3vw, 2rem);
+    background-color: #fff;
+    border-radius: 1.5rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #faq-1582 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    transition: color 0.3s;
+  }
+  #faq-1582 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #faq-1582 .cs-container {
+    max-width: 80rem;
+  }
+  #faq-1582 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #faq-1582 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  body.dark-mode #faq-1582 .cs-title,
+  body.dark-mode #faq-1582 .cs-h3 {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #faq-1108 .cs-faq-item.active .cs-button:before,
-  body.dark-mode #faq-1108 .cs-faq-item.active .cs-button:after {
-    background-color: var(--bodyTextColorWhite);
+  body.dark-mode #faq-1582 .cs-item {
+    background-color: var(--medium);
   }
-  body.dark-mode #faq-1108 .cs-faq-item.active .cs-item-p {
-    /* 20px - 24px */
-    padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
-  }
-  body.dark-mode #faq-1108 .cs-button {
-    background-color: var(--accent);
+  body.dark-mode #faq-1582 .cs-h3,
+  body.dark-mode #faq-1582 .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #faq-1108 .cs-button:before,
-  body.dark-mode #faq-1108 .cs-button:after {
-    background-color: var(--bodyTextColorWhite);
+  body.dark-mode #faq-1582 .cs-topper {
+    color: var(--secondary);
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1396 {
+    /* centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+    /* clips the orbs from causing overflow issues */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-1396 .cs-container {
+    width: 100%;
+    /* changes to 1024px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-1396 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-1396 .cs-title {
+    max-width: 20ch;
+    margin: 0;
+  }
+  #reviews-1396 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.15rem);
+  }
+  #reviews-1396 .cs-item {
+    list-style: none;
+    text-align: left;
+    /* 20px - 60px */
+    padding: clamp(1rem, 4vw, 3.75rem);
+    /* 12px - 24px */
+    border-radius: clamp(0.75rem, 1.5vw, 1.25rem);
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    /* clips the pseudo box from overflowing */
+    overflow: hidden;
+    display: flex;
+    grid-column: span 12;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background-color: #F7F7F7;
+  }
+  #reviews-1396 .cs-item:before {
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 0.05;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* prevents the mouse from interacting it */
+    pointer-events: none;
+  }
+  #reviews-1396 .cs-quote {
+    /* 72px - 120px */
+    width: clamp(4.5rem, 10vw, 7.5rem);
+    height: auto;
+    /* 32px - 64px */
+    margin-bottom: clamp(2rem, 6vw, 4rem);
+    display: block;
+  }
+  #reviews-1396 .cs-item-text {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 2.6vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: bold;
+    margin: 0;
+    /* 24px - 64px */
+    margin-bottom: clamp(1.5rem, 6vw, 4rem);
+    color: var(--bodyTextColor);
+  }
+  #reviews-1396 .cs-flex-group {
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* 8px - 24px */
+    gap: clamp(0.8rem, 1.5vw, 1rem);
+  }
+  #reviews-1396 .cs-profile {
+    /* 40px - 52px */
+    width: clamp(2.5rem, 5vw, 3.25rem);
+    height: clamp(2.5rem, 5vw, 3.25rem);
+    margin: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    /* clips image corners to make circle */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #reviews-1396 .cs-profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+  }
+  #reviews-1396 .cs-name {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1396 .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: #746f95;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-1396 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-1396 .cs-item {
+    grid-column: span 4;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-1396 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews-1396 .cs-item {
+    background-color: var(--medium);
+  }
+  body.dark-mode #reviews-1396 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #reviews-1396 .cs-quote {
+    opacity: 0.5;
+  }
+  body.dark-mode #reviews-1396 .cs-item-text,
+  body.dark-mode #reviews-1396 .cs-name {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews-1396 .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.7;
   }
 }

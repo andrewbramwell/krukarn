@@ -1,9 +1,9 @@
 ---
 title: 'Blog | Code Stitch Web Designs'
 description: 'Meta description for the page'
-permalink: 'blog/'
+permalink: 'news/'
 eleventyNavigation:
-    key: Blog
+    key: News
     order: 500
 ---
 
@@ -11,11 +11,36 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/blog.css">
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+    <link rel="preload" as="image" href="/assets/images/new-banner.webp">
 {% endblock %}
 
 {% block body %}
-   
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-2285">
+    <div class="cs-container">
+        <span class="cs-int-title">News</span>
+        <p class="cs-text">
+            Luctus accumsan tortor posuere ac ut consequat semper.
+        </p>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/news/" class="cs-link cs-active">News</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/new-banner-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/new-banner.webp">
+        <img decoding="async" src="/assets/images/new-banner.jpg" alt="flower bowl" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
 
     <!-- ============================================ -->
     <!--              Main Blog Content               -->

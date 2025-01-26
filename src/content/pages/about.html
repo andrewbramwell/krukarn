@@ -11,52 +11,164 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/about.css">
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+    <link rel="preload" as="image" href="/assets/images/new-banner.webp">
 {% endblock %}
 
 {% block body %}
 
 <!-- ============================================ -->
-<!--            Featured Service 1                -->
+<!--                   Banner                     -->
 <!-- ============================================ -->
 
-<section id="sbs-867">
+<div id="banner-2285">
     <div class="cs-container">
-        <picture class="cs-picture">
+        <span class="cs-int-title">About Us</span>
+        <p class="cs-text">
+            Luctus accumsan tortor posuere ac ut consequat semper.
+        </p>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/about/" class="cs-link cs-active">About Us</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/new-banner-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/new-banner.webp">
+        <img decoding="async" src="/assets/images/new-banner.jpg" alt="flower bowl" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1443">
+    <div class="cs-container">
+       <picture class="cs-picture">
             <!--Mobile Image -->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 576, height: 800}) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 576, height: 800}) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 576, height: 800}) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | jpeg %}" type="image/jpeg">
             <!--Tablet Image -->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1100, height: 1433}) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1100, height: 1433}) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1100, height: 1433}) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | jpeg %}" type="image/jpeg">
             <!--Desktop Image -->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1260, height: 1550}) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1260, height: 1550}) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/about.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/about.jpg" | resize({width: 1260, height: 1550}) | jpeg %}" alt="massage" width="630" height="775" loading="lazy" decoding="async" aria-hidden="true">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | jpeg %}" alt="image description" width="650" height="600" loading="lazy" decoding="async" aria-hidden="true">
         </picture>
         <div class="cs-content">
-            <span class="cs-topper">Featured Service</span>
-            <h2 class="cs-title">Occupational and Speech Therapy</h2>
+            <span class="cs-topper">Our Story</span>
+            <h2 class="cs-title">About Kru Karn</h2>
             <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta officiis praesentium necessitatibus tempora unde quasi porro nemo aliquam voluptatem quaerat hic, doloremque impedit perferendis labore, ea libero voluptas laudantium? 
+                With over a decade in Thai massage and holistic wellness, I combine traditional techniques with modern therapeutic approaches from my UK home studio. My passion lies in nurturing complete wellbeing, understanding that true health encompasses both body and mind. Each day, I witness the transformative power of Thai massage—how it not only eases physical tension but creates space for mental clarity and emotional balance.
             </p>
             <p class="cs-text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                Through teaching, I share this holistic approach, guiding students to master these healing practices while building successful businesses. My journey has shown me that Thai massage offers more than just physical benefits—it's a pathway to helping others find relief from modern life's stresses. Whether releasing muscle tension or creating moments of peaceful restoration, these techniques offer profound ways to support others' wellbeing.
             </p>
-            <div id="quote-827">
-                <span class="cs-quote-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                </span>
-                <span class="cs-name">Justin Time</span>
-                <span class="cs-job">CEO-Founder</span>
-                <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote-white.svg" alt="quote icon" width="136" height="77">
-            </div>                        
+            <p class="cs-text">
+                As a Kru (teacher), I'm committed to empowering my students with both practical skills and business knowledge, enabling them to make a lasting difference in their clients' lives while building rewarding careers in wellness.
+            </p>    
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<!-- No headers, so no section tag -->
+<div id="stats-315">
+    <ul class="cs-card-group">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="/assets/svgs/experience.svg" alt="icon" width="35" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">15+</span>
+                <span class="cs-stat">Years Experience</span>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="/assets/svgs/students.svg" alt="icon" width="40" height="35" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">150+</span>
+                <span class="cs-stat">Happy Students</span>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award-grey.svg" alt="icon" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+            </picture>
+            <div class="cs-flex-group">
+                <span class="cs-number">15</span>
+                <span class="cs-stat">Winning Awards</span>
+            </div>
+        </li>
+    </ul>
+</div>
+                                
+                                
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1444">
+    <div class="cs-container">
+       <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 576, height: 724}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1100, height: 724}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/service-1.jpg" | resize({width: 1300, height: 1032}) | jpeg %}" alt="image description" width="650" height="600" loading="lazy" decoding="async" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper">Mission & Vison</span>
+            <h2 class="cs-title">Our Mission & Vision</h2>
+            <p class="cs-text">
+                Dedicated to preserving and sharing authentic Thai massage while empowering female entrepreneurs to build thriving wellness businesses. We combine traditional Thai healing wisdom with modern business practices to create opportunities for growth and success.
+            </p>
+            <ul id="list-1404">
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/graduation.svg" alt="icon" width="32" height="32">
+                        Knowledge Sharing
+                    </h3>
+                    <p class="cs-item-text">
+                        Bringing Thai massage's therapeutic benefits to communities across the West, enhancing both physical and mental wellbeing through authentic practices.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <h3 class="cs-h3">
+                        <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/femenine.svg" alt="icon" width="32" height="32">
+                        Entrepreneur Support
+                    </h3>
+                    <p class="cs-item-text">
+                        Empowering Thai women overseas to establish and grow successful independent massage businesses through comprehensive training and mentorship.
+                    </p>
+                </li>
+            </ul>                       
+        </div>
+    </div>
+</section>
+                                
+                                
 
 
 {% endblock %}

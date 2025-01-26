@@ -32,11 +32,6 @@
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
         <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
-        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
-        {% if preloadImg != '' %}
-            <link rel="preload" as="image" href="{{ preloadImg }}"/>
-        {% endif %}
-
         <!-- Sitewide Stylesheets and Scripts -->
         <link rel="stylesheet" href="/assets/css/root.css">
         <link rel="stylesheet" href="/assets/css/dark.css">
@@ -53,20 +48,15 @@
 
         {% include "components/header.html" %}
 
-        {# Add banner to all pages except home page #}
-        {% if page.url != "/" %}
-            {% include 'components/banner-1400.html' %}
-        {% endif %}
-
         <main id="main">
             {% block body %}{% endblock %}
         </main>
         {# Add CTA to all pages except contact page #}
         {% if page.url != "/contact/" %}
-            {% include 'components/cta-262.html' %}
+            {% include 'components/cta.html' %}
         {% endif %}
 
-        {% include "components/footer-842.html" %}
+        {% include "components/footer-1527.html" %}
 
     </body>
 </html>

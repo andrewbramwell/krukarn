@@ -2,8 +2,8 @@
 title: Acuti modo
 url: acuti-modo
 description: Lorem markdownum tardantis unam mitissima dissimulator inposuit   corpus sintque tura tremenda, nec coetum.
-author: Code Stitch
-date: 2023-06-08T15:26:46.705Z
+author: Kru Karn
+date: 2024-06-08T15:26:46.705Z
 tags:
     - post
 image: /assets/images/blog/landing.jpg

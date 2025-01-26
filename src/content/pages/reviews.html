@@ -1,9 +1,9 @@
 ---
 title: 'Reviews | Code Stitch Web Designs'
 description: 'Meta description for the page'
-permalink: 'reviews/'
+permalink: 'testimonials/'
 eleventyNavigation:
-    key: Reviews
+    key: Testimonials
     order: 400
 ---
 
@@ -11,102 +11,218 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/reviews.css">
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+    <link rel="preload" as="image" href="/assets/images/new-banner.webp">
 {% endblock %}
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                  Reviews                     -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="reviews">
-        <div class="container">
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
+<div id="banner-2285">
+    <div class="cs-container">
+        <span class="cs-int-title">Testimonials</span>
+        <p class="cs-text">
+            Discover how our graduates built successful massage businesses.
+        </p>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/testimonials/" class="cs-link cs-active">Testimonials</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/new-banner-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/new-banner.webp">
+        <img decoding="async" src="/assets/images/new-banner.jpg" alt="flower bowl" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                  Content                     -->
+<!-- ============================================ -->
+
+<section id="content-1450">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Real Success Stories</h2>
+            <p class="cs-text">
+                Hear from therapists who transformed their careers through our training programmes. Their journeys showcase how our courses help build thriving massage practices around the world.
+            </p>
+        </div>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-544">
+    <div class="cs-container">
+        <div class="cs-review-group">
+            <picture class="cs-picture">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 288, height: 288}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 288, height: 288}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 288, height: 288}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 430, height: 430}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 430, height: 430}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 430, height: 430}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 512, height: 512}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 512, height: 512}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-1.jpg" | resize({width: 512, height: 512}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/test-1.jpg" | resize({width: 512, height: 512}) | jpeg %}" alt="student" width="256" height="256" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <p class="cs-review">
+                    "Fantastic course! The hands-on demonstrations were incredibly helpful. Can't wait to apply what I've learned."
                 </p>
-                <div class="star-group">
-                    <span class="name">B Miller<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Vincent M.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Alex L.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile-woman.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Arrieana M.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Leo N.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
-            </div>
-            <div class="review">
-                <picture>
-                    <img class="profile" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="" width="99" height="99">
-                </picture>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed recusandae rerum unde similique ratione sapiente necessitatibus natus mollitia nam iusto.
-                </p>
-                <div class="star-group">
-                    <span class="name">Brian A.<span class="desc">Homeowner</span></span>
-                    <picture>
-                        <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="91" height="15">
-                    </picture>
-                </div>
+                <span class="cs-name">Student Name</span>
+                <span class="cs-desc">Business Name</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-545">
+    <div class="cs-container">
+        <div class="cs-review-group">
+            <picture class="cs-picture">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 288, height: 288}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 288, height: 288}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 288, height: 288}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 430, height: 430}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 430, height: 430}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 430, height: 430}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 512, height: 512}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 512, height: 512}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-2.jpg" | resize({width: 512, height: 512}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/test-2.jpg" | resize({width: 512, height: 512}) | jpeg %}" alt="student" width="256" height="256" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <p class="cs-review">
+                    Absolutely loved the course! It's so informative and practical. I feel confident to start my own business now. Thank you!
+                </p>
+                <span class="cs-name">Student Name</span>
+                <span class="cs-desc">Business Name</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-544">
+    <div class="cs-container">
+        <div class="cs-review-group">
+            <picture class="cs-picture">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 288, height: 288}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 288, height: 288}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 288, height: 288}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 430, height: 430}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 430, height: 430}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 430, height: 430}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 512, height: 512}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 512, height: 512}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-3.jpg" | resize({width: 512, height: 512}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/test-3.jpg" | resize({width: 512, height: 512}) | jpeg %}" alt="student" width="256" height="256" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <p class="cs-review">
+                    "Engaging and insightful! I appreciate the instructor's passion for teaching and the personalized feedback provided."
+                </p>
+                <span class="cs-name">Student Name</span>
+                <span class="cs-desc">Business Name</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-545">
+    <div class="cs-container">
+        <div class="cs-review-group">
+            <picture class="cs-picture">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 288, height: 288}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 288, height: 288}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 288, height: 288}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 430, height: 430}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 430, height: 430}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 430, height: 430}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 512, height: 512}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 512, height: 512}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-4.jpg" | resize({width: 512, height: 512}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/test-4.jpg" | resize({width: 512, height: 512}) | jpeg %}" alt="student" width="256" height="256" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <p class="cs-review">
+                    "The online private mentorship exceeded my expectations in every way. The genuine dedication of my mentor to my success made me feel valued and supported throughout the entire journey."
+                </p>
+                <span class="cs-name">Student Name</span>
+                <span class="cs-desc">Business Name</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-5441">
+    <div class="cs-container">
+        <div class="cs-review-group">
+           <picture class="cs-picture">
+                <!--Mobile Image -->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 288, height: 288}) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 288, height: 288}) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 288, height: 288}) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image -->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 430, height: 430}) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 430, height: 430}) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 430, height: 430}) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image -->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 512, height: 512}) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 512, height: 512}) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/test-5.jpg" | resize({width: 512, height: 512}) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/test-5.jpg" | resize({width: 512, height: 512}) | jpeg %}" alt="student" width="256" height="256" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <p class="cs-review">
+                    "Simply amazing! The course covers everything from theory to practical applications. I feel ready to take my practice to the next level."
+                </p>
+                <span class="cs-name">Student Name</span>
+                <span class="cs-desc">Business Name</span>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+                                
 
 {% endblock %}

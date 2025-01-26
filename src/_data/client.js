@@ -1,18 +1,18 @@
 module.exports = {
     "name": "Splendid Sites Web Designs",
     "email": "help@splendidsites.com",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
-    "openingHours": "Mon-Sun: 9am-9pm",
+    "phoneForTel": "+447961915544",
+    "phoneFormatted": "07961 915544",
+    "openingHours": "Mon-Sun: 10am-8pm",
     "onlineBooking": "https://www.facebook.com/",
     "address": {
-        "lineOne": "First Address Line",
+        "lineOne": "159 Edwin Rd",
         "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "city": "Gillingham",
+        "state": "Kent",
+        "zip": "ME8 0AQ",
+        "country": "UK",
+        "mapLink": "https://maps.app.goo.gl/SaH722xtz5PCnam88"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",

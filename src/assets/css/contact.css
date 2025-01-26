@@ -225,6 +225,9 @@
   body.dark-mode #contact-1403 .cs-h3 {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #contact-1403 .cs-topper {
+    color: var(--secondary);
+  }
   body.dark-mode #contact-1403 .cs-contact-text,
   body.dark-mode #contact-1403 .cs-link {
     opacity: 0.8;

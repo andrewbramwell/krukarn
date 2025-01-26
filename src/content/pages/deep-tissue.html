@@ -1,71 +1,332 @@
 ---
-title: 'Deep Tissue Massage'
-description: "meta description"
+title: 'Deep Tissue Thai Oil Massage Course | Kru Karn '
+description: 'Meta description for the page'
 permalink: 'deep-tissue/'
 eleventyNavigation:
-
+    key: Deep Tissue Oil Massage
+    order: 3200
+    parent: Courses
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/service-page.css">
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/banner.jpg" | resize({width: 2560, height: 1136}) | avif %}">
+    <link rel="stylesheet" href="/assets/css/projects.css">
+    <link rel="preload" as="image" href="/assets/images/new-banner.webp">
 {% endblock %}
 
 {% block body %}
 
 <!-- ============================================ -->
-<!--                 Content Page                 -->
+<!--                   Banner                     -->
 <!-- ============================================ -->
 
-<section id="content-page-1399">
+<div id="banner-2285">
     <div class="cs-container">
-        <div class="cs-image-group">
-            <div class="cs-flex">
-                <picture class="cs-background">
-                <!--Mobile Image -->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | jpeg %}" type="image/jpeg">
-                <!--Tablet Image -->
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | avif %}" type="image/avif">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | webp %}" type="image/webp">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 874, height: 1072}) | jpeg %}" type="image/jpeg">
-                <!--Desktop Image -->
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | avif %}" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | webp %}" type="image/webp">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/featured-2.jpg" | resize({width: 1084, height: 1334}) | jpeg %}" alt="thai massage" width="542" height="728" loading="lazy" decoding="async" aria-hidden="true">
-                </picture>
-            </div>
+        <span class="cs-int-title">Deep Tissue Oil Massage Course</span>
+        <p class="cs-text">
+            Master therapeutic deep tissue techniques.
+        </p>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/deep-tissue/" class="cs-link cs-active">Deep Tissue Oil Massage Course</a>
         </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/new-banner-m.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/new-banner.webp">
+        <img decoding="async" src="/assets/images/new-banner.jpg" alt="flower bowl" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-1443">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <!--Mobile Image -->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 576, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 576, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 576, height: 724}) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image -->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1100, height: 724}) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1100, height: 724}) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1100, height: 724}) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image -->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1300, height: 1300}) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1300, height: 1300}) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1300, height: 1300}) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/oil-massage-course.jpg" | resize({width: 1300, height: 1300}) | jpeg %}" alt="deep tissue oil massage course" width="650" height="600" loading="lazy" decoding="async" aria-hidden="true">
+        </picture>
         <div class="cs-content">
-            <h1 class="cs-title">Experience <span class="cs-color">Traditional Thai Massage</span> in Falkirk</h1>
-            <p>Welcome to Falkirk Thai Massage! Immerse yourself in the authentic healing art of Traditional Thai Massage, where centuries-old techniques combine with expert touch to restore balance and vitality to your body and mind.</p>
-            <p>In your session, our skilled therapist uses time-honored techniques including precise pressure points, gentle stretching, and yoga-like movements to create a uniquely therapeutic experience. This dynamic treatment helps release tension, enhance flexibility, and restore energy flow throughout your body, delivering both immediate relief and long-lasting benefits.</p>
-            <p>Our Traditional Thai Massage is perfect for those seeking a holistic approach to wellness. Often described as 'passive yoga', this treatment helps improve flexibility, relieve muscle tension, and boost energy levels. Whether you're dealing with specific areas of tension, seeking to improve your range of motion, or looking to maintain overall wellness, this authentic Thai massage experience offers profound benefits for body and spirit.</p>
-            <h3>Discover the Falkirk Thai Massage Difference</h3>
-            <ul>
-                <li>
-                    <strong>Authentic Thai Heritage:</strong> Experience genuine Thai massage techniques passed down through generations, delivered with expertise and respect for tradition.
+            <h2 class="cs-title">Course Overview</h2>
+            <p class="cs-text">
+                Master the blend of deep tissue and traditional Thai massage techniques using therapeutic oils. Under Kru Karn's experienced guidance, learn effective methods for releasing muscle tension and delivering restorative treatments. This specialist programme equips therapists with skills to provide premium therapeutic services that clients value.
+            </p>
+            <ul id="list-1405" class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Progress from foundational techniques to advanced massage mastery
                 </li>
-                <li>
-                    <strong>Enhanced Flexibility:</strong> Benefit from our unique combination of stretching and pressure point work, designed to improve your range of motion and overall flexibility.
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Begin your professional practice immediately upon certification
                 </li>
-                <li>
-                    <strong>Energy Flow Optimization:</strong> Traditional techniques work along the body's energy lines to restore balance and promote natural healing processes.
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Learn from Kru Karn's 15+ years of authentic Thai massage expertise
                 </li>
-                <li>
-                    <strong>Comprehensive Treatment:</strong> Our full-body approach addresses both specific areas of tension and overall wellness, providing complete therapeutic benefits.
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Master the art of building a loyal customer base and generating referrals
                 </li>
-                <li>
-                    <strong>Adaptive Techniques:</strong> Each session is carefully adapted to your flexibility level and specific needs, ensuring both comfort and optimal therapeutic results.
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Create a compelling online presence that attracts premium clients
                 </li>
-            </ul>
-        </div>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/black-check.svg" alt="checkmark" width="24" height="24">
+                    Develop a profitable massage practice with proven marketing and business strategies
+                </li>
+            </ul>                    
         </div>
     </div>
 </section>
+                                
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
 
+<section id="pricing-357">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Pricing</span>
+            <h2 class="cs-title">Choose Your Learning Path</h2>
+            <p class="cs-text">
+                Transform your skills with our flexible learning options. Whether you prefer hands-on training or the convenience of online learning, we offer a programme that fits your schedule and learning style.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <!-- Option 1 -->
+            <li class="cs-item">
+                <h3 class="cs-h3">Basic (Online)</h3>
+                <p class="cs-item-text">
+                    Begin your journey with essential massage techniques.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price">£199</span>
+                </div>
+                <span class="cs-included">Build Your Foundation</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Learn via video
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Study anytime, anywhere
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Lifelong online course access
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Certificate included
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One-to-one learning
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One Day Course
+                    </li>
+                </ul>
+                <a href="/basic.html" class="cs-button-solid">Get Started</a>
+            </li>
+            <!-- Option 2 -->
+            <li class="cs-item cs-popular">
+                <h3 class="cs-h3">Pro (Online)</h3>
+                <p class="cs-item-text">
+                    Learn at your own pace with comprehensive video instruction.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price">£299</span>
+                </div>
+                <span class="cs-included">Professional Development</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Learn via video
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Study anytime, anywhere
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Lifelong online course access
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Certificate included
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One-to-one learning
+                    </li>
+                    <li class="cs-li cs-disabled">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One Day Course
+                    </li>
+                </ul>
+                <a href="/basic.html" class="cs-button-solid">Get Started</a>
+            </li>
+            <!-- Option 3 -->
+            <li class="cs-item">
+                <h3 class="cs-h3">Premium (Hands-on)</h3>
+                <p class="cs-item-text">
+                    Master Thai massage through personalised instruction.
+                </p>
+                <div class="cs-option-group">
+                    <span class="cs-price">£399</span>
+                </div>
+                <span class="cs-included">Transform Your Practice</span>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One-to-one learning
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        One Day Course
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Free lunch included
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Certificate included
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        FREE Online Course (£199 value)
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-li-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/check-blue.svg" alt="code stitch icon" width="20" height="20">
+                        Lifelong online course access 
+                    </li>
+                </ul>
+                <a href="/basic.html" class="cs-button-solid">Get Started</a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<!-- <section id="reviews-1395">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Happy Client’s Feedback About Our Service</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="/assets/svgs/purple-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+                <p class="cs-item-text">
+                    Small businesses are the heartbeat of communities, embodying the spirit of entrepreneurship, determination, and local support. 
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="/assets/svgs/profile-woman.svg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Britney Allison
+                        <span class="cs-job">Founder Of Yokoloko</span>
+                    </span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="/assets/svgs/purple-quote.svg" decoding="async" alt="quote icon" width="120" height="99">
+                <p class="cs-item-text">
+                    I want to say a huge thank you to the Stitch team. The guys in a short time and very efficiently helped me with the development of a website for my new startup.
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="/assets/svgs/profile-woman.svg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Jessica Jonson
+                        <span class="cs-job">CTO Of Meriette</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>-->
+                                
+
+<!-- ============================================ -->
+<!--                      FAQ                     -->
+<!-- ============================================ -->
+
+<section id="faq-1582">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">1. Do I need prior experience?</h3>
+                    <p class="cs-item-text">
+                       No prior experience needed. Our courses suit both beginners and experienced therapists looking to expand their services.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">2. Can you provide training at my business location?</h3>
+                    <p class="cs-item-text">
+                        Yes, for groups of 4 or more students. Contact us to arrange on-site training.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">3. Lorem ipsum dolor sit amet consectetur?</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! 
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">4. Lorem ipsum dolor sit amet consectetur?</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugiat impedit molestias vitae voluptatibus sed enim! 
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+            
 {% endblock %}
