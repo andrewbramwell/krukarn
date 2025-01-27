@@ -277,22 +277,31 @@
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
+body,
+html {
+  /* reset margin and padding so there's no gap between the nav and the screen edges */
+  margin: 0;
+  padding: 0;
+}
+/* Mobile - 767px */
+@media only screen and (max-width: 47.9375rem) {
+  #cs-navigation .cs-top-link:nth-of-type(2) {
+    display: none;
+  }
+}
 /* Mobile - 1023px */
 @media only screen and (max-width: 63.9375rem) {
   body.cs-open {
     overflow: hidden;
   }
-  body.scroll #cs-navigation:before {
-    height: 100%;
+  body.cs-open #cs-navigation {
+    background-color: #1a1a1a;
   }
   #cs-navigation {
     width: 100%;
-    padding: 1.25rem 1rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    background: rgba(26, 26, 26, 0.08);
-    -webkit-backdrop-filter: blur(27px);
-    backdrop-filter: blur(27px);
+    background-color: rgba(26, 26, 26, 0.84);
     position: fixed;
     z-index: 10000;
     transition: background-color 0.3s;
@@ -300,34 +309,19 @@
   #cs-navigation:before {
     content: "";
     width: 100%;
-    height: 0%;
-    background: #1a1a1a;
-    opacity: 1;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    transition: height 0.3s;
-  }
-  #cs-navigation:after {
-    content: "";
-    width: 100%;
     height: 0vh;
     background: rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    position: absolute;
+    opacity: 0;
     display: block;
-    top: 0%;
+    position: absolute;
+    top: 100%;
     right: 0;
     z-index: -1100;
-    opacity: 0;
     transition: height 0.5s, opacity 0.5s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
-  #cs-navigation.cs-active {
-    background-color: #1a1a1a;
-  }
-  #cs-navigation.cs-active:after {
+  #cs-navigation.cs-active:before {
     height: 150vh;
     opacity: 1;
   }
@@ -337,23 +331,81 @@
     transition-delay: 0.15s;
   }
   #cs-navigation.cs-active .cs-li {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+  }
+  #cs-navigation .cs-top-bar {
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-navigation .cs-top-container {
+    width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.125rem;
+  }
+  #cs-navigation .cs-top-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #cs-navigation .cs-top-link {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #cs-navigation .cs-link-icon {
+    width: 1rem;
+    height: auto;
+    display: block;
+  }
+  #cs-navigation .cs-top-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  #cs-navigation .cs-social-link {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+  #cs-navigation .cs-social-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
   }
   #cs-navigation .cs-container {
     width: 100%;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
   #cs-navigation .cs-logo {
-    width: auto;
-    /* 56px - 80px */
-    height: clamp(3.5rem, 5vw, 5rem);
+    width: 9.1875rem;
+    height: auto;
     margin: 0 auto 0 0;
-    padding: 0;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,17 +421,11 @@
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 0 0 auto;
-    background-color: var(--primary);
+    background-color: #484848;
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.6s;
-    position: relative;
-    z-index: 10;
-  }
-  #cs-navigation .cs-toggle.cs-active {
-    transform: rotate(180deg);
   }
   #cs-navigation .cs-active .cs-line1 {
     top: 50%;
@@ -387,12 +433,12 @@
   }
   #cs-navigation .cs-active .cs-line2 {
     top: 50%;
-    transform-origin: center;
     transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+    transform-origin: center;
   }
   #cs-navigation .cs-active .cs-line3 {
-    bottom: 100%;
     opacity: 0;
+    bottom: 100%;
   }
   #cs-navigation .cs-box {
     /* 24px - 28px */
@@ -403,20 +449,20 @@
   #cs-navigation .cs-line {
     width: 100%;
     height: 2px;
-    border-radius: 2px;
     background-color: #fafbfc;
+    border-radius: 2px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
   #cs-navigation .cs-line1 {
     top: 0;
-    transform-origin: center;
     transition: transform 0.5s, top 0.3s, left 0.3s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
-    animation-fill-mode: forwards;
     animation-direction: normal;
+    animation-fill-mode: forwards;
+    transform-origin: center;
   }
   #cs-navigation .cs-line2 {
     top: 50%;
@@ -424,8 +470,8 @@
     transition: top 0.3s, left 0.3s, transform 0.5s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
-    animation-fill-mode: forwards;
     animation-direction: normal;
+    animation-fill-mode: forwards;
   }
   #cs-navigation .cs-line3 {
     bottom: 0;
@@ -434,40 +480,40 @@
   #cs-navigation .cs-ul-wrapper {
     width: 100%;
     height: auto;
-    padding-bottom: 2.4em;
-    opacity: 0;
-    background-color: #fff;
-    box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    padding-bottom: 3rem;
+    background-color: #1a1a1a;
     overflow: hidden;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    opacity: 0;
     position: absolute;
     top: 100%;
     left: 0;
     z-index: -1;
     transform: scaleY(0);
-    transform-origin: top;
     transition: transform 0.4s, opacity 0.3s;
+    transform-origin: top;
   }
   #cs-navigation .cs-ul {
-    margin: 0;
-    padding: 3rem 0 0 0;
     width: 100%;
     height: auto;
     max-height: 65vh;
+    margin: 0;
+    padding: 3rem 0 0 0;
     overflow: scroll;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 1.25rem;
   }
   #cs-navigation .cs-li {
-    width: 100%;
     text-align: center;
     list-style: none;
+    width: 100%;
     margin-right: 0;
+    opacity: 0;
     /* transition from these values */
     transform: translateY(-4.375rem);
-    opacity: 0;
     transition: transform 0.6s, opacity 0.9s;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
@@ -513,41 +559,20 @@
     /* 16px - 24px */
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     line-height: 1.2em;
-    text-transform: uppercase;
-    font-weight: bold;
     text-decoration: none;
     margin: 0;
-    color: var(--headerColor);
+    color: var(--bodyTextColorWhite);
     display: inline-block;
     position: relative;
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: var(--primary);
+    color: var(--secondary);
   }
   #cs-navigation .cs-li-link:hover {
-    color: var(--primary);
+    color: var(--secondary);
   }
   #cs-navigation .cs-button-solid {
     display: none;
-  }
-}
-/* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-  body.dark-mode #cs-navigation {
-    background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-mode #cs-navigation .cs-line {
-    background-color: #fff;
-  }
-  body.dark-mode #cs-navigation .cs-ul-wrapper {
-    background-color: var(--medium);
-  }
-  body.dark-mode #cs-navigation .cs-li-link {
-    color: var(--bodyTextColorWhite);
   }
 }
 /*-- -------------------------- -->
@@ -561,21 +586,18 @@
     display: block;
   }
   #cs-navigation .cs-dropdown {
-    position: relative;
     color: var(--bodyTextColorWhite);
+    position: relative;
   }
   #cs-navigation .cs-dropdown.cs-active .cs-drop-ul {
     height: auto;
-    opacity: 1;
-    visibility: visible;
     margin: 0.75rem 0 0 0;
     padding: 0.75rem 0;
+    opacity: 1;
+    visibility: visible;
   }
   #cs-navigation .cs-dropdown.cs-active .cs-drop-link {
     opacity: 1;
-  }
-  #cs-navigation .cs-dropdown.cs-active .cs-drop-icon {
-    transform: translateY(-50%) rotate(180deg);
   }
   #cs-navigation .cs-dropdown .cs-li-link {
     position: relative;
@@ -588,7 +610,6 @@
     top: 50%;
     right: -1.25rem;
     transform: translateY(-50%);
-    transition: transform 0.3s;
   }
   #cs-navigation .cs-drop-ul {
     width: 100%;
@@ -598,10 +619,10 @@
     background-color: var(--primary);
     overflow: hidden;
     opacity: 0;
-    visibility: hidden;
     display: flex;
-    justify-content: flex-start;
+    visibility: hidden;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 0.75rem;
     transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s, visibility 0.3s;
@@ -624,9 +645,9 @@
     cursor: pointer;
   }
   #cs-navigation .cs-dropdown:hover .cs-drop-ul {
-    transform: scaleY(1);
     opacity: 1;
     visibility: visible;
+    transform: scaleY(1);
   }
   #cs-navigation .cs-dropdown:hover .cs-drop-li {
     opacity: 1;
@@ -643,24 +664,26 @@
     padding: 0;
     background-color: #1a1a1a;
     overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
     opacity: 0;
-    visibility: hidden;
     border-bottom: 5px solid var(--primary);
+    visibility: hidden;
     /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
     position: absolute;
-    top: 99.5%;
+    top: 99.9%;
     z-index: -100;
     transform: scaleY(0);
-    transform-origin: top;
     transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
+    transform-origin: top;
   }
   #cs-navigation .cs-drop-li {
-    list-style: none;
     font-size: 1rem;
     text-decoration: none;
-    opacity: 0;
+    list-style: none;
     width: 100%;
     height: auto;
+    color: var(--bodyTextColorWhite);
+    opacity: 0;
     display: block;
     transform: translateY(-0.625rem);
     transition: opacity 0.6s, transform 0.6s;
@@ -692,25 +715,34 @@
   #cs-navigation .cs-drop-li:nth-of-type(9) {
     transition-delay: 0.45s;
   }
-  #cs-navigation .cs-li-link:hover .cs-drop-icon {
-    filter: grayscale(1) brightness(1000%);
+  #cs-navigation .cs-drop-li:nth-of-type(10) {
+    transition-delay: 0.5s;
+  }
+  #cs-navigation .cs-drop-li:nth-of-type(11) {
+    transition-delay: 0.55s;
+  }
+  #cs-navigation .cs-drop-li:nth-of-type(12) {
+    transition-delay: 0.6s;
+  }
+  #cs-navigation .cs-drop-li:nth-of-type(13) {
+    transition-delay: 0.65s;
   }
   #cs-navigation .cs-li-link.cs-drop-link {
-    white-space: nowrap;
-    width: 100%;
     font-size: 1rem;
     line-height: 1.5em;
     text-decoration: none;
-    padding: 0.75rem;
+    white-space: nowrap;
+    width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
+    padding: 0.75rem;
     color: var(--bodyTextColorWhite);
     display: block;
     transition: color 0.3s, background-color 0.3s;
   }
   #cs-navigation .cs-li-link.cs-drop-link:hover {
-    background-color: var(--primary);
-    color: var(--bodyTextColorWhite);
+    background-color: #f7f7f7;
+    color: var(--primary);
   }
   #cs-navigation .cs-li-link.cs-drop-link:before {
     display: none;
@@ -721,42 +753,88 @@
 <--- -------------------------- -*/
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  body.scroll {
-    /* when the scroll class is on the body, run these styles */
-  }
-  body.scroll #cs-navigation:before {
-    height: 100%;
-  }
   #cs-navigation {
     width: 100%;
-    padding: 0 1rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    background: rgba(26, 26, 26, 0.08);
-    -webkit-backdrop-filter: blur(27px);
-    backdrop-filter: blur(27px);
+    padding: 0;
+    background-color: rgba(26, 26, 26, 0.84);
     position: fixed;
     z-index: 10000;
   }
-  #cs-navigation:before {
-    /* on scroll background */
-    content: "";
+  #cs-navigation .cs-top-bar {
     width: 100%;
-    height: 0%;
-    background: #1a1a1a;
-    opacity: 1;
-    position: absolute;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-navigation .cs-top-container {
+    width: 100%;
+    max-width: 80rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.125rem;
+  }
+  #cs-navigation .cs-top-contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #cs-navigation .cs-top-link {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #cs-navigation .cs-top-link:hover {
+    text-decoration: underline;
+  }
+  #cs-navigation .cs-link-icon {
+    width: 1rem;
+    height: auto;
     display: block;
-    top: 0;
-    left: 0;
-    transition: height 0.3s;
+  }
+  #cs-navigation .cs-top-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  #cs-navigation .cs-social-link {
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  #cs-navigation .cs-social-link:hover {
+    transform: translateY(-0.25rem);
+  }
+  #cs-navigation .cs-social-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
   }
   #cs-navigation .cs-container {
     width: 100%;
-    /* same height as the cs-ul-wrapper */
-    height: 6.25rem;
     max-width: 80rem;
+    /* same height as the cs-ul-wrapper */
+    height: 5.8125rem;
     margin: auto;
+    /* prevents padding from affecting height */
+    box-sizing: border-box;
+    padding: 0 1rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -767,7 +845,8 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: auto;
+    width: 18.4%;
+    max-width: 12.3125rem;
     height: 3.75rem;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
@@ -786,8 +865,8 @@
   #cs-navigation .cs-ul-wrapper {
     /* absolutely positioned to be dead center */
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
   }
   #cs-navigation .cs-ul {
@@ -797,11 +876,12 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.5rem;
+    /* 20px - 36px */
+    gap: clamp(1.25rem, 2.6vw, 2.25rem);
   }
   #cs-navigation .cs-li {
     list-style: none;
-    padding: 2.5rem 0;
+    padding: 2.25rem 0;
     /* prevent flexbox from squishing it */
     flex: none;
   }
@@ -809,73 +889,76 @@
     /* 14px - 16px */
     font-size: clamp(0.875rem, 0.6vw, 1rem);
     line-height: 1.5em;
-    font-weight: 700;
     text-decoration: none;
-    text-transform: uppercase;
     margin: 0;
-    padding: 0 1rem;
     color: var(--bodyTextColorWhite);
     display: block;
+    position: relative;
+    transition: color 0.3s;
+  }
+  #cs-navigation .cs-li-link:before {
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #cs-navigation .cs-li-link:hover {
+    color: var(--secondary);
+  }
+  #cs-navigation .cs-li-link:hover:before {
+    width: 100%;
+  }
+  #cs-navigation .cs-li-link.cs-active {
+    color: var(--secondary);
+  }
+  #cs-navigation .cs-li-link.cs-active:before {
+    width: 100%;
+  }
+  #cs-navigation .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    display: inline-block;
     position: relative;
     z-index: 1;
     transition: color 0.3s;
   }
-  #cs-navigation .cs-li-link:before {
-    /* on scroll background */
-    content: "";
-    width: 100%;
-    height: 2.5rem;
-    background: var(--primary);
-    opacity: 0;
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    z-index: -1;
-    transform: translate(-50%, -50%) scale(1.2);
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  #cs-navigation .cs-li-link:hover:before {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  #cs-navigation .cs-li-link.cs-active:before {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  #cs-navigation .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 2rem;
-    background-color: transparent;
-    border: 1px solid var(--primary);
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
   #cs-navigation .cs-button-solid:before {
     content: "";
-    position: absolute;
-    height: 100%;
     width: 0%;
-    background: var(--primary);
+    height: 100%;
+    background: #fff;
     opacity: 1;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: width 0.3s;
   }
+  #cs-navigation .cs-button-solid:hover {
+    color: #1a1a1a;
+  }
   #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
+  }
+  #cs-navigation .cs-nav-button {
+    line-height: 2.875rem;
   }
 }
 /*-- -------------------------- -->
