@@ -299,7 +299,6 @@ html {
     width: 100%;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    border-bottom: 1px solid #484848;
     position: fixed;
     z-index: 10000;
   }
@@ -324,8 +323,8 @@ html {
     content: "";
     width: 0%;
     height: 100%;
-    background: #1a1a1a;
-    opacity: 0.8;
+    background: var(--primary);
+    opacity: 0.9;
     position: absolute;
     display: block;
     top: 0;
@@ -357,9 +356,7 @@ html {
   }
   #cs-navigation .cs-logo {
     width: 6.4375rem;
-    /* Reduced from 147/16 = 9.1875rem by 30% */
-    height: 6.4375rem;
-    /* Making it square with same width */
+    height: 5rem;
     margin: 0 auto 0 0;
     padding: 0;
     box-sizing: border-box;
@@ -377,11 +374,12 @@ html {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 0 0 auto;
-    background-color: #484848;
+    background-color: var(--secondary);
     border: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0.25rem;
   }
   #cs-navigation .cs-active .cs-line1 {
     top: 50%;
@@ -520,6 +518,7 @@ html {
     color: var(--bodyTextColorWhite);
     display: inline-block;
     position: relative;
+    font-family: syne;
   }
   #cs-navigation .cs-li-link.cs-active {
     color: var(--secondary);
@@ -572,7 +571,7 @@ html {
     height: 0;
     margin: 0;
     padding: 0;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -717,7 +716,6 @@ html {
     padding: 0;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
-    border: 1px solid #484848;
     position: fixed;
     z-index: 10000;
   }
@@ -726,8 +724,8 @@ html {
     content: "";
     width: 100%;
     height: 0%;
-    background: #1a1a1a;
-    opacity: 0.8;
+    background: var(--primary);
+    opacity: 0.9;
     position: absolute;
     display: block;
     top: 0;
@@ -756,7 +754,7 @@ html {
   #cs-navigation .cs-logo {
     width: 26%;
     /* 20% + 30% increase */
-    max-width: 280px;
+    max-width: 100px;
     /* 215px + 30% increase */
     height: 4.875rem;
     /* 3.75rem + 30% increase */
@@ -805,6 +803,7 @@ html {
     display: block;
     position: relative;
     transition: color 0.3s;
+    font-family: syne;
   }
   #cs-navigation .cs-li-link:before {
     content: "";
@@ -828,43 +827,6 @@ html {
     color: var(--secondary);
   }
   #cs-navigation .cs-li-link.cs-active:before {
-    width: 100%;
-  }
-  #cs-navigation .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 2rem;
-    background-color: var(--primary);
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    transition: color 0.3s;
-  }
-  #cs-navigation .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #fff;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #cs-navigation .cs-button-solid:hover {
-    color: #1a1a1a;
-  }
-  #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
   }
   #cs-navigation .cs-nav-button {
