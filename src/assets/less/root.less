@@ -427,21 +427,19 @@ html {
         }
 
         .cs-logo {
-            width: (147/16rem);
-            height: auto;
+            width: 6.4375rem;  /* Reduced from 147/16 = 9.1875rem by 30% */
+            height: 6.4375rem;  /* Making it square with same width */
             margin: 0 auto 0 0;
             padding: 0;
-            /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 10;
-
+        
             img {
                 width: 100%;
                 height: 100%;
-                /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
         }
@@ -913,24 +911,22 @@ html {
         }
 
         .cs-logo {
-            width: 18.4%;
-            max-width: (197/16rem);
-            height: (60/16rem);
-            /* margin-right auto pushes everything away from it to the right */
+            width: 26%;  /* 20% + 30% increase */
+            max-width: 280px;  /* 215px + 30% increase */
+            height: 4.875rem;  /* 3.75rem + 30% increase */
             margin: 0 auto 0 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 100;
-
+         
             img {
                 width: 100%;
                 height: 100%;
-                /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
                 object-fit: contain;
             }
-        }
+         }
 
         .cs-ul-wrapper {
             /* absolutely positioned to be dead center */
