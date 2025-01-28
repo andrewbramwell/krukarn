@@ -63,13 +63,6 @@
     grid-column: span 12;
     grid-row: span 1;
   }
-  #services-1175 .cs-item:hover .cs-h3,
-  #services-1175 .cs-item:hover .cs-link {
-    color: var(--secondary);
-  }
-  #services-1175 .cs-item:hover .cs-arrow {
-    filter: initial;
-  }
   #services-1175 .cs-picture {
     width: 6.25rem;
     height: auto;
@@ -150,9 +143,6 @@
   body.dark-mode #services-1175 .cs-item {
     background-color: var(--medium);
     border-color: rgba(255, 255, 255, 0.2);
-  }
-  body.dark-mode #services-1175 .cs-item:hover .cs-h3 {
-    color: var(--secondary);
   }
   body.dark-mode #services-1175 .cs-topper {
     color: var(--secondary);
