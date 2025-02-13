@@ -107,6 +107,7 @@
     max-width: 40.625rem;
     min-height: 22.625rem;
     border-radius: 1.5rem;
+    background-color: var(--primary);
     /* clips img tag corners */
     overflow: hidden;
     display: block;
@@ -159,6 +160,9 @@
   }
   body.dark-mode #sbs-1443 .cs-li-picture {
     background-color: var(--dark);
+  }
+  body.dark-mode #sbs-1443 .cs-picture {
+    background-color: var(--medium);
   }
 }
 /*-- -------------------------- -->
